@@ -1,0 +1,6 @@
+Vanilla        5.99    25
+Chocolate      6.59    30
+Strawberry     7.75    18
+Banana         7.35    0
+Protein        8.29    16
+Veggie         5.99    12

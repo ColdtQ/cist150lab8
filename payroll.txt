@@ -1,0 +1,4 @@
+Sam     A  Smoothie  16  27  200
+Mark    J  Twain     19  42  175
+Joe     B  Nameth    27  40  450
+Albert  I  Einstein  35  35  936
