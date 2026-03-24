@@ -14,7 +14,7 @@ int main()
 {
     const int MAX_ITEMS = 10;
 
-    // Arrays and control variables are declared in main.
+    // arrays and control variables are declared in main.
     string flavors[MAX_ITEMS];
     double prices[MAX_ITEMS];
     int quantities[MAX_ITEMS];
@@ -26,7 +26,7 @@ int main()
     double totalSales = 0.0;
     double totalProfit = 0.0;
 
-    // Read file data into arrays.
+    // read file data into arrays.
     flavorCount = readMenu(menuFileName, flavors, prices, quantities, MAX_ITEMS);
 
     if (flavorCount == 0)
@@ -35,13 +35,13 @@ int main()
         return 1;
     }
 
-    // Display the menu.
+    // display the menu.
     dispMenu(flavors, prices, flavorCount);
 
     cout << fixed << setprecision(2);
     cout << "Flavor Sales Details:" << endl;
 
-    // Calculate totals and print one line per flavor.
+    // calculate totals and print one line per flavor.
     for (int i = 0; i < flavorCount; i++)
     {
         int sold = quantities[i];
@@ -61,13 +61,13 @@ int main()
 
     cout << endl;
 
-    // Print summary information.
+    // print summary information.
     printSummary(totalSold, totalSales, totalProfit);
 
     return 0;
 }
 
-// Prints basic store information.
+// prints basic store information.
 void printStoreInfo()
 {
     cout << "Rich's Smoothie Shop" << endl;
@@ -75,7 +75,7 @@ void printStoreInfo()
     cout << "(407) 555-0199" << endl;
 }
 
-// Reads flavor data from file into arrays and returns number of flavors read.
+// reads flavor data from file into arrays and returns number of flavors read.
 int readMenu(const string& fileName, string flavors[], double prices[], int quantities[], int maxSize)
 {
     ifstream inFile;
@@ -92,7 +92,7 @@ int readMenu(const string& fileName, string flavors[], double prices[], int quan
     double price;
     int quantity;
 
-    // Initial read before loop.
+    // initial read before loop.
     inFile >> flavor >> price >> quantity;
 
     while (inFile && count < maxSize)
@@ -102,7 +102,7 @@ int readMenu(const string& fileName, string flavors[], double prices[], int quan
         quantities[count] = quantity;
         count++;
 
-        // Read inside loop.
+        // read inside loop.
         inFile >> flavor >> price >> quantity;
     }
 
@@ -110,7 +110,7 @@ int readMenu(const string& fileName, string flavors[], double prices[], int quan
     return count;
 }
 
-// Displays today's smoothie menu.
+// displays today's smoothie menu.
 void dispMenu(const string flavors[], const double prices[], int count)
 {
     printStoreInfo();
@@ -128,7 +128,7 @@ void dispMenu(const string flavors[], const double prices[], int count)
     cout << endl;
 }
 
-// Prints the daily summary report.
+// prints the daily summary report.
 void printSummary(int totalSold, double totalSales, double totalProfit)
 {
     cout << "--- Daily Sales Summary ---" << endl;
