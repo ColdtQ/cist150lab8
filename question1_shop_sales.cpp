@@ -9,7 +9,7 @@ void printSalesForMonth(const int sales[][MONTHS_IN_YEAR], int numberOfYears);
 
 int main()
 {
-    // 2D array of smoothie sales: rows are years, columns are months.
+    // 2d array of smoothie sales: rows are years, columns are months.
     int sales[][MONTHS_IN_YEAR] = {
         { 15, 29, 42, 53, 65, 56, 29, 58, 19, 24, 81, 81 }, // Year 1
         { 43, 86, 37, 24, 63, 75, 86, 45, 64, 61, 20, 17 }, // Year 2
@@ -21,12 +21,12 @@ int main()
         // { 14, 34, 23, 36, 26, 17, 42, 21, 47, 36, 43, 43 }  // Year 6
     };
 
-    // Determine number of years (rows) at compile time using sizeof.
+    // determine number of years (rows) at compile time using sizeof.
     int numberOfYears = sizeof(sales) / sizeof(sales[0]);
 
     int choice = 0;
 
-    // Menu loop.
+    // menu loop.
     do
     {
         cout << "--- Rich's Smoothie Shop ---" << endl;
@@ -63,7 +63,7 @@ int main()
     return 0;
 }
 
-// Option 1: print all monthly sales for one year and that year's total.
+// option 1: print all monthly sales for one year and that year's total.
 void printSalesForYear(const int sales[][MONTHS_IN_YEAR], int numberOfYears)
 {
     int year;
@@ -96,7 +96,7 @@ void printSalesForYear(const int sales[][MONTHS_IN_YEAR], int numberOfYears)
     cout << "Total: " << total << endl;
 }
 
-// Option 2: print one month across all years and the total.
+// option 2: print one month across all years and the total.
 void printSalesForMonth(const int sales[][MONTHS_IN_YEAR], int numberOfYears)
 {
     int month;

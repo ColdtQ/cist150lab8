@@ -53,7 +53,7 @@ int main()
     return 0;
 }
 
-// Prints basic store information to an output stream.
+// prints basic store information to an output stream.
 void printStoreInfo(ostream& out)
 {
     out << "Rich's Smoothie Shop" << endl;
@@ -62,8 +62,8 @@ void printStoreInfo(ostream& out)
     out << endl;
 }
 
-// Processes payroll records and writes each employee payroll line to the output file.
-// Uses read-before-loop and read-inside-loop structure.
+// processes payroll records and writes each employee payroll line to the output file.
+// uses read-before-loop and read-inside-loop structure.
 double processPayroll(ifstream& inFile, ostream& outFile, int& employeeCount)
 {
     string firstName;
@@ -75,7 +75,7 @@ double processPayroll(ifstream& inFile, ostream& outFile, int& employeeCount)
     double weeklySalary;
     double totalPayroll = 0.0;
 
-    // Initial read before loop.
+    // initial read before loop.
     inFile >> firstName >> middleInitial >> lastName >> hours >> rate >> bonus;
 
     while (inFile)
@@ -89,7 +89,7 @@ double processPayroll(ifstream& inFile, ostream& outFile, int& employeeCount)
         totalPayroll = totalPayroll + weeklySalary;
         employeeCount++;
 
-        // Read inside loop for next record.
+        // read inside loop for next record.
         inFile >> firstName >> middleInitial >> lastName >> hours >> rate >> bonus;
     }
 

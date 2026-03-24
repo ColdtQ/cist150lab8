@@ -34,7 +34,7 @@ int main()
     return 0;
 }
 
-// Prints basic store information.
+// prints basic store information.
 void printStoreInfo()
 {
     cout << "Rich's Smoothie Shop" << endl;
@@ -43,8 +43,8 @@ void printStoreInfo()
     cout << endl;
 }
 
-// Processes payroll records and returns total payroll amount.
-// Uses read-before-loop and read-inside-loop structure.
+// processes payroll records and returns total payroll amount.
+// uses read-before-loop and read-inside-loop structure.
 double processPayroll(ifstream& inFile, int& employeeCount)
 {
     string firstName;
@@ -56,7 +56,7 @@ double processPayroll(ifstream& inFile, int& employeeCount)
     double weeklySalary;
     double totalPayroll = 0.0;
 
-    // Initial read before loop.
+    // initial read before loop.
     inFile >> firstName >> middleInitial >> lastName >> hours >> rate >> bonus;
 
     while (inFile)
@@ -70,7 +70,7 @@ double processPayroll(ifstream& inFile, int& employeeCount)
         totalPayroll = totalPayroll + weeklySalary;
         employeeCount++;
 
-        // Read inside loop for next record.
+        // read inside loop for next record.
         inFile >> firstName >> middleInitial >> lastName >> hours >> rate >> bonus;
     }
 
